@@ -1,0 +1,79 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: blueviolet;
+    font-family: 'Coming Soon', cursive;
+}
+
+.container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+#groceries {
+    margin-top: 30px;
+    padding: 30px;
+    background-color: white;
+    width: 50%;
+    height: auto;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 10px 10px 24px 0px rgba(0,0,0,0.50);  
+}
+
+#title {
+    padding: 20px;
+}
+
+i {
+    padding: 10px;
+}
+
+#all_items {
+    text-align: center;
+    padding: 20px;
+}
+
+#all_prices {
+    text-align: center;
+    padding: 20px;
+}
+
+#user_input_item {
+    outline: none;
+    border: none;
+    border-bottom: 3px solid black;
+    width: 200px;
+    font-family: 'Coming Soon', cursive;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+#user_input_price {
+    outline: none;
+    border: none;
+    border-bottom: 3px solid black;
+    width: 100px;
+    font-family: 'Coming Soon', cursive;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+#lists {
+    display: inline-flex;
+    
+}
+#totals {
+    display: inline-flex;
+    margin: 20px;
+    
+}
+
+#count {
+    padding: 20px;
+}

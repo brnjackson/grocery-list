@@ -1,27 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <script src="https://kit.fontawesome.com/66b922ceef.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Coming+Soon&display=swap" rel="stylesheet">
     <title>Grocery List</title>
 </head>
+
 <body>
+<body onload="totalItems()" />
     <div class="container">
         <div id="groceries">
             <div id="title">
                 <h1>Grocery List</h1>
             </div>
             <div id="input">
-                <i id="pencil" class="fa-solid fa-pencil"></i>
-                <input id="user_input">
+                <i id="clear" class="fa-solid fa-trash-arrow-up"></i>
+                <input id="user_input_item" placeholder="Enter grocery item" required>
+                <input id="user_input_price" placeholder="Enter grocery item price" type="number" required>
+                <input type="submit" id="add_item" onClick="addItemAndPrice()" />
             </div>
-            <div id="all_items"></div>
+            <div id="lists">
+                <div id="all_items"></div>
+                <div id="all_prices"></div>
+            </div>
+            <div id="totals">
+               <div id="count">
+                   <input type="submit" id="calculate" value="Click for total items:">
+                   <span id="total_items">0</span>
+                
+            </div>
+               <div id="count">
+                <input type="submit" id="calculate_price" value="Click for total price:">
+                <span id="total_price">0</span>
+            </div>
+            </div>
         </div>
     </div>
     <script src="script.js"></script>
-    
+    <script type="text/javascript">
+        document.getElementById("total_items").innerHTML = document.getElementById("all_items").children.length;
+    </script>
+
 </body>
+
 </html>
