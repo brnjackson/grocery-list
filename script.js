@@ -104,6 +104,7 @@ document.getElementById("bread").onclick = () => {
   const price = document.createElement("h2");
   price.className = "price_class";
 
+
   item.innerHTML = "bread";
   price.innerHTML = Number(2.50).toFixed(2);
 
