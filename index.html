@@ -26,6 +26,13 @@
                 <input id="user_input_price" placeholder="Enter grocery item price" type="number" required>
                 <input type="submit" id="add_item" onClick="addItemAndPrice()" />
             </div>
+            <div id="quick_add">
+                <h3>Quick Add Items:</h3>
+                <input type="submit" name="quickadd" class="cheese" id="cheese" value="cheese">
+                <input type="submit" name="quickadd" class="bread" id="bread" value="bread" onclick="quickAddItem()">
+                <input type="submit" name="quickadd" class ="milk" id="milk" value="milk" onclick="quickAddItem()">
+                <input type="submit" name="quickadd" class="chips" id="chips" value="chips" onclick="quickAddItem()">
+            </div>
             <div id="lists">
                 <div id="all_items"></div>
                 <div id="all_prices"></div>
