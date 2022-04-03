@@ -14,12 +14,16 @@ document.querySelector("#clear").addEventListener("click", () => {
     document.querySelector("#total_price").innerHTML = "0";
   });
 
+  document.querySelector("#clear").addEventListener("click", () => {
+    document.querySelector("#total_price2").innerHTML = "try again";
+  });
 // functionality for adding item
 addItemAndPrice = () => {
   // item is going to be an new h2 element
   const item = document.createElement("h2");
   const price = document.createElement("h2")
-    price.id = 'price'
+    price.id = 'price_id'
+    price.className = 'price_class'
   // consisting of the user input
   item.textContent = document.querySelector("#user_input_item").value;
   price.textContent = document.querySelector("#user_input_price").value;
@@ -58,14 +62,6 @@ addItemAndPrice = () => {
 
 totalItems = () => {};
 
-totalPrice = () => {
-    let arr = []
-    let eachPrice = Number(document.getElementsByClassName('price').innerHTML)
-
-    arr.push(eachPrice)
-
-    return arr.reduce((a, b) => a + b)
-};
 
 
 document.getElementById("calculate").onclick = () => {
@@ -74,12 +70,12 @@ document.getElementById("calculate").onclick = () => {
 };
 
 document.getElementById("calculate_price").onclick = () => {
-    let eachPrice = parseInt(document.getElementById('price').innerHTML) + 5 
-    for(let i = 0; i < eachPrice[i]; i++) {
-        console.log(eachPrice[i])
+    let collection = document.getElementsByClassName('price_class')
+    let sum = 0
+    for(let i = 0; i < collection.length; i++) {
+        sum += Number(collection[i].innerHTML)
     }
-
-    document.getElementById("total_price").innerHTML = eachPrice
+    document.getElementById("total_price").innerHTML = '$'+ sum
 }
 // if no price OR item - alert X
 // quantify amount of items and display in total X
