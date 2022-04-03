@@ -2,7 +2,9 @@ document.querySelector("#clear").addEventListener("click", () => {
   document.querySelector("#all_items").textContent = "";
   document.querySelector("#all_prices").textContent = "";
   document.querySelector("#total_items").innerHTML = "0";
-  document.querySelector("#total_price").innerHTML = "0";
+  document.querySelector("#total_price").innerHTML = "$0";
+  document.getElementById("total_price").style.color = 'black'
+  document.getElementById("total_items").style.color = 'black'
 });
 
 // functionality for adding item
@@ -66,6 +68,7 @@ addItemAndPrice = () => {
 document.getElementById("calculate").onclick = () => {
   document.getElementById("total_items").innerHTML =
     document.getElementById("all_items").children.length;
+    document.getElementById("total_items").style.color = 'blue';
 };
 
 document.getElementById("calculate_price").onclick = () => {
@@ -74,7 +77,9 @@ document.getElementById("calculate_price").onclick = () => {
   for (let i = 0; i < collection.length; i++) {
     sum += Number(collection[i].innerHTML)
   }
+  
   document.getElementById("total_price").innerHTML = "$" + sum.toFixed(2);
+  document.getElementById("total_price").style.color = 'darkgreen'
 };
 
 document.getElementById("cheese").onclick = () => {
@@ -165,6 +170,112 @@ document.getElementById("chips").onclick = () => {
   document.querySelector("#all_prices").appendChild(price);
 
 }
+document.getElementById("ketchup").onclick = () => {
+  const item = document.createElement("h2");
+  const price = document.createElement("h2");
+  price.className = "price_class";
+
+  item.innerHTML = "ketchup";
+  price.innerHTML = 4.35;
+
+  item.addEventListener("click", () => {
+    // if there is not a line through the item
+    if (item.style.textDecoration != "line-through")
+      // cross it out
+      item.style.textDecoration = "line-through";
+    // if not just let be
+    else item.style.textDecoration = "none";
+  });
+
+  document.querySelector("#all_items").appendChild(item);
+  document.querySelector("#all_prices").appendChild(price);
+
+}
+document.getElementById("lettuce").onclick = () => {
+  const item = document.createElement("h2");
+  const price = document.createElement("h2");
+  price.className = "price_class";
+
+  item.innerHTML = "lettuce";
+  price.innerHTML = 1.99;
+
+  item.addEventListener("click", () => {
+    // if there is not a line through the item
+    if (item.style.textDecoration != "line-through")
+      // cross it out
+      item.style.textDecoration = "line-through";
+    // if not just let be
+    else item.style.textDecoration = "none";
+  });
+
+  document.querySelector("#all_items").appendChild(item);
+  document.querySelector("#all_prices").appendChild(price);
+
+}
+document.getElementById("chicken").onclick = () => {
+  const item = document.createElement("h2");
+  const price = document.createElement("h2");
+  price.className = "price_class";
+
+  item.innerHTML = "chicken";
+  price.innerHTML = 9.75;
+
+  item.addEventListener("click", () => {
+    // if there is not a line through the item
+    if (item.style.textDecoration != "line-through")
+      // cross it out
+      item.style.textDecoration = "line-through";
+    // if not just let be
+    else item.style.textDecoration = "none";
+  });
+
+  document.querySelector("#all_items").appendChild(item);
+  document.querySelector("#all_prices").appendChild(price);
+
+}
+document.getElementById("garlic").onclick = () => {
+  const item = document.createElement("h2");
+  const price = document.createElement("h2");
+  price.className = "price_class";
+
+  item.innerHTML = "garlic";
+  price.innerHTML = 4.25;
+
+  item.addEventListener("click", () => {
+    // if there is not a line through the item
+    if (item.style.textDecoration != "line-through")
+      // cross it out
+      item.style.textDecoration = "line-through";
+    // if not just let be
+    else item.style.textDecoration = "none";
+  });
+
+  document.querySelector("#all_items").appendChild(item);
+  document.querySelector("#all_prices").appendChild(price);
+
+}
+document.getElementById("pasta").onclick = () => {
+  const item = document.createElement("h2");
+  const price = document.createElement("h2");
+  price.className = "price_class";
+
+  item.innerHTML = "pasta";
+  price.innerHTML = Number(1.60).toFixed(2);
+
+  item.addEventListener("click", () => {
+    // if there is not a line through the item
+    if (item.style.textDecoration != "line-through")
+      // cross it out
+      item.style.textDecoration = "line-through";
+    // if not just let be
+    else item.style.textDecoration = "none";
+  });
+
+  document.querySelector("#all_items").appendChild(item);
+  document.querySelector("#all_prices").appendChild(price);
+
+}
+
 // if no price OR item - alert X
 // quantify amount of items and display in total X
 // calculate total of all prices

@@ -1,7 +1,77 @@
+body {
+    font-family: 'Work Sans', sans-serif !important;
+    background-color: rgb(203, 248, 248) !important;
+}
+
+h1 {
+    font-weight: 800 !important;
+    font-size: 60px !important;
+}
+
+i {
+    font-size: 35px;
+    padding: 10px;
+    margin-right: 10px;
+}
+
+.form-control {
+    font-size: 14px !important;
+}
+
+
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0; }
+
+  #groceries {
+      background-color: white;
+      padding-top: 15px;
+      margin: auto;
+      margin-top: 20px;
+      margin-bottom: 20x;
+      width: 60%;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  #title {
+      margin: 50px;
+  }
+
+  #instructions {
+      text-align: center;
+      font-size: 18px;
+  }
+
+#total_items, #total_price {
+    text-align: center;
+    font-size: 3rem;
+}
+
+#all_items, #all_prices {
+    text-align: center;
+}
+
+#quick_add{
+    padding: 50px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#totals {
+    padding: 50px;
+}
+
+#count {
+    text-align: center;
+}
+
+
+
+
 /* * {
     padding: 0;
     margin: 0;
