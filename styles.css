@@ -18,6 +18,10 @@ i {
     font-size: 14px !important;
 }
 
+#quick_add .btn {
+    margin: 5px !important;
+}
+
 
 
 input::-webkit-outer-spin-button,
@@ -67,6 +71,7 @@ input::-webkit-inner-spin-button {
 
 #count {
     text-align: center;
+    font-weight: 300;
 }
 
 
