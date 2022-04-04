@@ -50,6 +50,12 @@ input::-webkit-inner-spin-button {
       font-size: 18px;
   }
 
+  #lists {
+    overflow-x:hidden;
+    overflow-y:auto;
+    height: 200px;
+  }
+
 #total_items, #total_price {
     text-align: center;
     font-size: 3rem;
