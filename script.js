@@ -7,6 +7,7 @@ document.querySelector("#clear").addEventListener("click", () => {
   document.getElementById("total_items").style.color = 'black'
 });
 
+
 // functionality for adding item
 addItemAndPrice = () => {
   // item is going to be an new h2 element
@@ -48,6 +49,7 @@ addItemAndPrice = () => {
   if (inputPrice === "") {
     alert("Please enter the item's price");
   }
+  
 
   // add the new item to the all items div
 };

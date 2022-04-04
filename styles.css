@@ -27,7 +27,31 @@ i {
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
+
+  
   margin: 0; }
+
+
+
+   /* Designing for scroll-bar */
+   ::-webkit-scrollbar {
+    width: 10px;
+    position: static;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: gainsboro;
+    border-radius: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 5px;
+}
+
+/* Handle on hover */
 
   #groceries {
       background-color: white;
@@ -35,7 +59,7 @@ input::-webkit-inner-spin-button {
       margin: auto;
       margin-top: 20px;
       margin-bottom: 20x;
-      width: 60%;
+      width: 75%;
       align-items: center;
       justify-content: center;
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -48,12 +72,18 @@ input::-webkit-inner-spin-button {
   #instructions {
       text-align: center;
       font-size: 18px;
+      background-color: rgb(238, 236, 236);
+      width: 70%;
+      margin: auto;
+      border-radius: 25px;
+      padding: 10px;
   }
 
   #lists {
     overflow-x:hidden;
     overflow-y:auto;
     height: 200px;
+    margin: auto;
   }
 
 #total_items, #total_price {
