@@ -1,3 +1,64 @@
+@media only screen and (max-width: 600px) {
+    #input {
+
+        padding: 0;
+       
+    }
+
+    #groceries {
+        overflow-x:hidden;
+        overflow-y:auto;
+    }
+
+    i {
+        font-size: 1rem;
+    }
+
+    #instructions {
+        height: 5rem;
+        overflow-x:hidden;
+    overflow-y:auto;
+    text-align: left;
+
+    }
+
+    #quick_add .btn{
+        width: auto;
+        margin: 25px !important;
+        padding: 3px !important;
+    }
+    h2, .item_class {
+        font-size: 1rem! important;
+    }
+
+    h1 {
+        font-size: 25% !important;
+        position: relative;
+    }
+
+    #lists {
+        width: 60%;
+    }
+
+    #total_items, #total_price {
+        font-size: 2rem !important;
+    }
+}
+
+@media only screen and (max-width: 1200px){
+    #instructions {
+        height: 10%;
+        overflow-x:hidden;
+    overflow-y:auto;
+    }
+}
+
+
+/* #input2 {
+    display: none;
+} */
+
+
 body {
     font-family: 'Work Sans', sans-serif !important;
     background-color: rgb(203, 248, 248) !important;
@@ -5,7 +66,7 @@ body {
 
 h1 {
     font-weight: 800 !important;
-    font-size: 60px !important;
+    font-size: 3rem !important;
 }
 
 h3 {
@@ -13,7 +74,7 @@ h3 {
 }
 
 i {
-    font-size: 30px;
+    font-size: 1.5rem;
     padding: 10px;
     margin-right: 10px;
 }
@@ -83,20 +144,30 @@ input::-webkit-inner-spin-button {
       margin: 20px;
   }
 
+  #missing_item {
+      position: fixed;
+      top: 0;
+      left: 0;
+  }
+
   #instructions {
-      text-align: center;
       font-size: 14px;
       background-color: rgb(238, 236, 236);
       width: 70%;
       margin: auto;
       border-radius: 25px;
       padding: 10px;
+      height: 10%;
+        overflow-x:hidden;
+    overflow-y:auto;
+      
+      
   }
 
   #lists {
     overflow-x:hidden;
     overflow-y:auto;
-    height: 150px;
+    height: 20vh;
     margin: auto;
   }
 
@@ -113,6 +184,8 @@ input::-webkit-inner-spin-button {
     padding: 25px;
     align-items: center;
     justify-content: space-around;
+    width: 80%;
+    margin: auto;
 }
 
 #totals {

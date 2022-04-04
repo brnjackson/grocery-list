@@ -1,3 +1,5 @@
+
+
 document.querySelector("#clear").addEventListener("click", () => {
   document.querySelector("#all_items").textContent = "";
   document.querySelector("#all_prices").textContent = "";
@@ -8,11 +10,13 @@ document.querySelector("#clear").addEventListener("click", () => {
 });
 
 
+
 // functionality for adding item
 addItemAndPrice = () => {
   // item is going to be an new h2 element
   const item = document.createElement("h2");
   const price = document.createElement("h2");
+  item.className = "item_class"
   price.className = "price_class";
   // consisting of the user input
   
@@ -42,17 +46,27 @@ addItemAndPrice = () => {
     document.querySelector("#user_input_price").value = "";
   }
 
-  if (inputItem === "") {
-    alert("Please enter an item");
+  if (inputItem === "" || inputPrice === "" ) {
+    document.getElementById('missing_item').style.display = 'block';
   }
 
-  if (inputPrice === "") {
-    alert("Please enter the item's price");
-  }
-  
 
   // add the new item to the all items div
 };
+
+closeAlert = () => {let close_alert = document.getElementsByClassName('close')
+for(let i =0; i < close_alert.length; i++) {
+  if(close_alert[i].className === "close") {
+    document.getElementById('missing_item').style.display = "none";
+  }
+
+}
+
+}
+// close_alert.addEventListener("click", () => {
+//   console.log(hello)
+//   document.getElementById('missing_item').style.display = "none";
+// })
 
 
 // document.getElementById("cheese").onclick = () => {
